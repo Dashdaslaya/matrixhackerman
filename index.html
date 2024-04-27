@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Animation</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        (function flakeOne() {
+            var letter = "****";
+            var color = "green";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeOneParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeOneParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeTwo() {
+            var letter = "-";
+            var color = "blue";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeTwoParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeTwoParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeThree() {
+            var letter = "+";
+            var color = "red";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeThreeParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeThreeParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFour() {
+            var letter = "8";
+            var color = "purple";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFourParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFourParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "&";
+            var color = "yellow";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+
+    <script>
+        (function flakeFive() {
+            var letter = "^";
+            var color = "aqua";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "%";
+            var color = "violet";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "Yahoo!";
+            var color = "purple";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "$$$";
+            var color = "gold";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "@";
+            var color = "green";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "1";
+            var color = "green";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "0";
+            var color = "green";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "#";
+            var color = "pink";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "Tor";
+            var color = "pink";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "Matrix";
+            var color = "green";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "Youtube";
+            var color = "red";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+
+    <script>
+        (function flakeFive() {
+            var letter = "○(=#=>";
+            var color = "orange";
+            var container = document.createElement('div');
+            document.body.appendChild(container);
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = '0';
+            container.style.width = '100%';
+            container.style.height = '100%';
+            container.style.overflow = 'hidden';
+            container.style.pointerEvents = 'none';
+
+            function init() {
+                var injection = document.createElement('style');
+                document.body.appendChild(injection);
+                injection.innerHTML = '@-webkit-keyframes snow { from { top: -1%; } to { top: 121%; } } @-moz-keyframes snow { from { top: -1%; } to { top: 121%; } }';
+            }
+            init();
+
+            window.setInterval(flakeFiveParticle, 200);
+
+            var timeChoices = [5, 6, 7, 8, 9, 10];
+
+            function destroy(evt) {
+                container.removeChild(evt.target);
+            }
+
+            function flakeFiveParticle() {
+                var particle = document.createElement('span');
+                var randomSpeed = timeChoices[Math.floor(Math.random() * timeChoices.length)];
+                particle.innerHTML = letter;
+                particle.className = 'flake';
+                particle.style.position = 'absolute';
+                particle.style.color = color;
+                particle.style.backgroundColor = 'transparent';
+                particle.style.width = '75px';
+                particle.style.height = '75px';
+                particle.style.pointerEvents = 'none';
+                particle.style.right = Math.random() * 100 + '%';
+                particle.style.borderRadius = '50%';
+                particle.style.WebkitAnimation = 'snow ' + randomSpeed + 's linear';
+                particle.style.MozAnimation = 'snow ' + randomSpeed + 's linear';
+                container.appendChild(particle);
+                particle.addEventListener('webkitAnimationEnd', destroy);
+                particle.addEventListener('AnimationEnd', destroy);
+            }
+        })();
+    </script>
+</body>
+</html>
